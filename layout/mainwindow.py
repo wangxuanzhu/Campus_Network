@@ -14,25 +14,25 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         super(MainWindow, self).__init__(parent)
         self.setupUi(self)
         self.ui_login.clicked.connect(self.login)
-        self.ui_exit.clicked.connect(self.exit)
+        self.ui_check.clicked.connect(self.check)
 
-
-
-    def login(self):        #登录函数
+    def login(self):  # 登录函数
         user = self.zhanghao.text()
         pwd = self.mima.text()
         a.LOGIN.Login(user=user, pwd=pwd)
-        state = a.LOGIN.check_net()
-        if state == True:
-            #self.messageDialog("登录成功或网络已连接")
-            return ;
+        self.check()
+
+    def check(self):
+        self.msg("检测网络", '确定后开始检查')
+        state = a.check_net()
+        print(state)
+        if state:
+            self.msg(tip="网络状态", msg="登陆失败")
         else:
-            #self.messageDialog("登陆失败")
-            return ;
+            self.msg(tip="网络状态", msg="登录成功或网络已连接")
 
-
-    def exit(self):
-        exit()
+    def msg(self, tip, msg):
+            QtWidgets.QMessageBox.information(self, tip, msg, QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.Yes)
 
 
 '''保存密码功能

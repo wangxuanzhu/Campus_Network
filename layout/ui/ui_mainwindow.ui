@@ -165,7 +165,7 @@
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>290</y>
+      <y>300</y>
       <width>81</width>
       <height>31</height>
      </rect>
@@ -183,11 +183,11 @@
      <string>登录</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="ui_exit">
+   <widget class="QPushButton" name="ui_check">
     <property name="geometry">
      <rect>
       <x>270</x>
-      <y>290</y>
+      <y>300</y>
       <width>81</width>
       <height>31</height>
      </rect>
@@ -202,7 +202,34 @@
      </font>
     </property>
     <property name="text">
-     <string>退出</string>
+     <string>检查网络</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="re_pwd">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>270</y>
+      <width>71</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>苹方-简</family>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>记住密码</string>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>16</width>
+      <height>18</height>
+     </size>
     </property>
    </widget>
   </widget>
