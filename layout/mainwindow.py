@@ -33,14 +33,3 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
     def msg(self, tip, msg):
             QtWidgets.QMessageBox.information(self, tip, msg, QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.Yes)
-
-
-'''保存密码功能
-    def save_login_info(self):
-        settings = QSettings("config.ini", QSettings.IniFormat)        #方法1：使用配置文件
-        #settings = QSettings("mysoft","myapp")                        #方法2：使用注册表
-        settings.setValue("account",self.zhanghao.text())
-        settings.setValue("password", self.mima.text())
-        settings.setValue("remeberpassword", self.checkBox_remeberpassword.isChecked())
-        settings.setValue("autologin", self.checkBox_autologin.isChecked())
-'''
