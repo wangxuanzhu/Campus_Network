@@ -5,11 +5,13 @@
 # @Author    :Jay
 
 from PyQt5 import QtWidgets
-from layout.ui.ui_mainwindow import Ui_MainWindow
+
 from action import a
+from PyQt5.QtWidgets import QMainWindow
+from layout.ui.ui_mainwindow import Ui_MainWindow
 
 
-class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
+class MainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self, parent=None):
         super(MainWindow, self).__init__(parent)
         self.setupUi(self)
